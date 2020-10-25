@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Inclined Plane Simulation</title>
+		<script src="Plane.js"></script>
+		
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="planeStyle.css" type="text/css" />
+		<meta name="description" content="Inclined Plane Simulation" />
+	</head>
+	
+	<body>
+		<header id="mainHeader">
+			<h2>  Inclined Plane Simulation 📐</h2>
+		</header>
+		<nav>
+		</nav>
+		<section 	id="options">
+			<header>
+				<h3>Set your options</h3>
+			</header>
+			
+			<article id="optionsArticle">
+				<form name="form1"  method="post" >
+					Plane length (meters)<br/>
+					<input type="text" size="20" id="length" value="300"/><br/>
+					Angle (degrees)<br/>
+					<input type="text" size="20" id="angle" value ="30"/><br/>
+					coefficient of friction (0-1)<br/>
+					<input type="text" size="20" id="friction" value ="0.1"/><br/><br/>
+					<input type='checkbox' id="mute" onclick="muteUnmute()"  checked>Mute
+					&nbsp;&nbsp;&nbsp;
+					<button type='button' id="moreOptionsButton" onclick="showOptions()">More options</button> 
+					<button type='button' id="lessOptionsButton" onclick="hideOptions()">Less options</button><br/><br/>
+					<button type='button' onclick="valid(0)" style="width: 170px;">Start</button> 
+				</form>
+			</article>
+			
+			<article id="advancedOptionsArticle">
+				<form name="form2"  method="post">
+					Display refresh (s)<br/>
+					<input type="text" size="20" id="dt" value="0.03"/><br/>
+					Mass length (meters)<br/>
+					<input type="text" size="20" id="Length" value ="10"/><br/>
+					Mass height (meters)<br/>
+					<input type="text" size="20" id="Height" value ="6"/><br/><br/>
+				</form>
+			</article>
+				
+			<article id="advancedOptionsArticle2">
+				<form name="form3"  method="post">
+					Acceleration of gravity<br/>
+					<input type="text" size="20" id="g" value="9.81"/><br/>
+				</form>
+			</article>
+		</section>
+		
+		<div style="clear: both;"></div>
+		
+		<section 	id="plane">
+			<article id="parametersArticle" >
+				time: 0 s<br/>
+				velocity: 0 m/s<br/>
+				acceleration: 0 m/s<sup>2</sup><br/>
+				max coefficient:<br/>
+			</article>
+			
+			<article id="canvasArticle">
+				<canvas id="canvas" width="200" height="175" style="display: inline-block;"></canvas>
+				<br/>
+			</article>
+		</section>
+		<footer >
+		<br/><br/>
+		</footer>
+	</body>
+</html>
+
+
